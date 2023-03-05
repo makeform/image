@@ -1,0 +1,6 @@
+div
+  style(type="text/css"): include:stylus index.styl
+  script(type="@plotdb/block"): include:lsc index.ls
+  div(plug="preview")
+    .mb-2.w-100(ld-each="image")
+      img(ld="image",src="data:image/gif;base64,R0lGODlhAwABAIAAAHFxcQAAACH5BAAAAAAALAAAAAADAAEAAAIChAsAOw==")

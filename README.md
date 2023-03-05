@@ -1,0 +1,5 @@
+# @makeform/image
+
+## License
+
+MIT
