@@ -2,5 +2,13 @@ div
   style(type="text/css"): include:stylus index.styl
   script(type="@plotdb/block"): include:lsc index.ls
   div(plug="preview")
+    .ldcv(ld="dialog"): .base
+      .position-absolute.d-flex.g-2(style="top:1em;right:1em;line-height:1.25em")
+        a.clickable(ld="open",data-ldcv-set="",target="_blank",rel="noopener noreferrer")
+          i.text-lg.i-new-page.d-block(style="background:#fff;padding:.5em;border-radius:.25em")
+        i.text-lg.i-close.d-block.clickable(data-ldcv-set="",
+        style="background:#fff;padding:.5em;border-radius:.25em")
+      a.inner.d-block(data-ldcv-set="",ld="container")
     .mb-2.w-100(ld-each="image")
-      img(ld="image",src="data:image/gif;base64,R0lGODlhAwABAIAAAHFxcQAAACH5BAAAAAAALAAAAAADAAEAAAIChAsAOw==")
+      img.clickable(ld="image",
+      src="data:image/gif;base64,R0lGODlhAwABAIAAAHFxcQAAACH5BAAAAAAALAAAAAADAAEAAAIChAsAOw==")
