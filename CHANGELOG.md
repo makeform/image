@@ -1,5 +1,10 @@
 # Change Logs
 
+## v1.0.2
+
+ - add `object-fit` to prevent image distort
+
+
 ## v1.0.1
 
  - support preview dialog by clicking with a link to open image in new tab
