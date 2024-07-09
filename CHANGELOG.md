@@ -1,5 +1,10 @@
 # Change Logs
 
+## v1.0.3
+ 
+ - update missing dist files in 1.0.2
+
+
 ## v1.0.2
 
  - add `object-fit` to prevent image distort
