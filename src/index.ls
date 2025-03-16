@@ -17,7 +17,6 @@ module.exports =
       img = new Image!
       finish = (opt) ->
         res(_sizehash[url].data = opt)
-        console.log ">", opt
         _sizehash[url].[]queue.for-each ({res}) -> res opt
       img.onerror = -> finish {ratio: 1.5, width: 150, height: 100}
       img.onload = ->

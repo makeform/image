@@ -1,5 +1,10 @@
 # Change Logs
 
+## v1.1.1
+
+ - remove unnecessary log
+
+
 ## v1.1.0
 
  - support `crop` and `lightbox` config
