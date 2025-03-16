@@ -1,6 +1,6 @@
 # Change Logs
 
-## v1.1.0 (upcoming)
+## v1.1.0
 
  - support `crop` and `lightbox` config
 
