@@ -1,5 +1,10 @@
 # Change Logs
 
+## v1.1.2
+
+ - add custom message when support checking failed
+
+
 ## v1.1.1
 
  - remove unnecessary log

@@ -4,8 +4,13 @@ module.exports =
     dependencies: [
       {url: "https://cdn.jsdelivr.net/npm/imgtype@0.0.1/index.min.js"}
     ]
+    i18n:
+      "zh-TW":
+        "image required": "檔案需為可於瀏覽器中顯示的圖檔"
+      "en":
+        "image required": "File must be a browser-viewable image."
 
-  init: ({ctx, root, parent}) ->
+  init: ({ctx, root, parent, t}) ->
     {imgtype} = ctx
     lc = {meta: {}, crop: {}}
     _sizehash = {}
@@ -40,7 +45,7 @@ module.exports =
         fr = new FileReader!
         fr.onload = ->
           ({ext, mime}) <- imgtype(new Uint8Array fr.result).then _
-          res if !ext => {supported: false} else {supported: true}
+          res if !ext => {supported: false, message: t("image required")} else {supported: true}
         fr.readAsArrayBuffer(file)
       catch e
         rej e
