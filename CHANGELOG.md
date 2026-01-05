@@ -1,5 +1,10 @@
 # Change Logs
 
+## v1.2.0
+
+ - support @grantdash/composer host
+
+
 ## v1.1.2
 
  - add custom message when support checking failed

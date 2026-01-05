@@ -1,14 +1,38 @@
 module.exports =
   pkg:
-    name: "@makeform/image", extend: {name: '@makeform/upload'}
+    name: \@makeform/image
+    extend: name: \@makeform/upload
+    host: name: \@grantdash/composer
     dependencies: [
-      {url: "https://cdn.jsdelivr.net/npm/imgtype@0.0.1/index.min.js"}
+    * url: "https://cdn.jsdelivr.net/npm/imgtype@0.0.1/index.min.js"
     ]
     i18n:
       "zh-TW":
         "image required": "檔案需為可於瀏覽器中顯示的圖檔"
+        config:
+          crop:
+            enabled: name: '啟用裁切', desc: '若啟用，將基於寬高設定裁切圖片'
+            width: name: '圖寬', desc: '裁切時的預期圖寬'
+            height: name: '圖高', desc: '裁切時的預期圖高'
+          lightbox: enabled: name: '啟用燈箱', desc: '若啟用，點擊圖片時將彈出燈箱效果供瀏覽圖片'
       "en":
         "image required": "File must be a browser-viewable image."
+        config:
+          crop:
+            enabled:
+              name: 'enable cropping'
+              desc: 'crop image based on ratio derived from width / height below if enabled'
+            width: name: 'image width', desc: 'expected image width when cropped'
+            height: name: 'image height', desc: 'expected image height when copped'
+          lightbox: enabled: name: 'enable lightbox', desc: 'toggle a lightbox for previewing when clicking if enabled'
+  client: ->
+    meta: config:
+      crop:
+        enabled: type: \boolean, default: false, name: 'config.crop.enabled.name', desc: 'config.crop.enabled.desc'
+        width: type: \number, min: 1, max: 2000, name: 'config.crop.width.name', desc: 'config.crop.width.desc'
+        height: type: \number, min: 1, max: 2000, name: 'config.crop.height.name', desc: 'config.crop.height.desc'
+      lightbox:
+        enabled: type: \boolean, default: true, name: 'config.lightbox.enabled.name', desc: 'config.lightbox.enabled.desc'
 
   init: ({ctx, root, parent, t}) ->
     {imgtype} = ctx
