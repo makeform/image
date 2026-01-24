@@ -1,5 +1,10 @@
 # Change Logs
 
+## v1.2.1
+
+ - use local imgtype lib
+
+
 ## v1.2.0
 
  - support @grantdash/composer host

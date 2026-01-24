@@ -4,7 +4,8 @@ module.exports =
     extend: name: \@makeform/upload
     host: name: \@grantdash/composer
     dependencies: [
-    * url: "https://cdn.jsdelivr.net/npm/imgtype@0.0.1/index.min.js"
+    # or use cdn: https://cdn.jsdelivr.net/npm/imgtype@0.0.1/index.min.js
+    * name: \imgtype
     ]
     i18n:
       "zh-TW":
